@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Giriş</title>
+  </head>
+  <body style="text-align:center; margin-top:100px;">
+    <h2>Bu kitabı okuyabilmek için büyülü kelimeyi gir 💫</h2>
+    <input type="password" id="sifre">
+    <button onclick="giris()">Aç</button>
+
+    <script>
+      function giris() {
+        var sifre = document.getElementById("sifre").value;
+        if (sifre === "BACIM") {
+          window.location.href = "kitap.html";
+        } else {
+          alert("Yanlış şifre!");
+        }
+      }
+    </script>
+  </body>
+</html>

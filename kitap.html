@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Kitap</title>
+  </head>
+  <body style="text-align:center; margin-top:40px;">
+    <img id="sayfa" src="img/sayfa1.jpg" style="width:80%; max-width:600px;"><br><br>
+    <button onclick="geri()">← Geri</button>
+    <button onclick="ileri()">İleri →</button>
+
+    <script>
+      let sayfaNo = 1;
+      function guncelle() {
+        document.getElementById("sayfa").src = "img/sayfa" + sayfaNo + ".jpg";
+      }
+      function ileri() {
+        if (sayfaNo < 18) {
+          sayfaNo++;
+          guncelle();
+        }
+      }
+      function geri() {
+        if (sayfaNo > 1) {
+          sayfaNo--;
+          guncelle();
+        }
+      }
+    </script>
+  </body>
+</html>
